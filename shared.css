@@ -43,12 +43,12 @@ nav .inner{
   padding:20px 24px; max-width:1080px; margin:0 auto;
 }
 .logo{
-  font-family:'Anton', sans-serif; text-transform:uppercase;
-  font-size:20px; letter-spacing:0.04em; line-height:1;
-  text-decoration:none; justify-self:start; grid-column:1;
-  white-space:nowrap;
+  display:flex; align-items:center;
+  justify-self:start; grid-column:1;
 }
-.logo span{color:var(--ember);}
+.logo img{
+  height:56px; width:auto; display:block;
+}
 .navlinks{
   display:flex; gap:28px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
   justify-self:center; grid-column:2; align-items:center; white-space:nowrap;
@@ -101,6 +101,7 @@ nav .inner{
   .navlinks{display:none;}
   .menu-toggle{display:block; grid-column:1; justify-self:start;}
   .logo{grid-column:2;}
+  .logo img{height:38px;}
   .mobile-menu{display:flex;}
 }
 
