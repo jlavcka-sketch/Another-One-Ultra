@@ -68,15 +68,16 @@ nav .inner{
   padding:0;
 }
 .menu-toggle span{
-  position:absolute; left:6px; right:6px; height:2px; background:var(--paper);
-  transition:transform .25s ease, opacity .2s ease;
+  position:absolute; top:50%; left:50%;
+  width:20px; height:2px; background:var(--paper);
+  transform-origin:center;
+  transition:transform .25s ease;
 }
-.menu-toggle span:nth-child(1){top:13px;}
-.menu-toggle span:nth-child(2){top:13px; transform:rotate(90deg);}
-.menu-toggle span:nth-child(3){top:23px;}
-.menu-toggle.open span:nth-child(1){transform:translateY(10px) rotate(45deg);}
-.menu-toggle.open span:nth-child(2){transform:translateY(10px) rotate(-45deg);}
-.menu-toggle.open span:nth-child(3){opacity:0;}
+.menu-toggle span:nth-child(1){transform:translate(-50%,-50%);}
+.menu-toggle span:nth-child(2){transform:translate(-50%,-50%) rotate(90deg);}
+.menu-toggle span:nth-child(3){display:none;}
+.menu-toggle.open span:nth-child(1){transform:translate(-50%,-50%) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){transform:translate(-50%,-50%) rotate(-45deg);}
 
 .mobile-menu{
   position:fixed; inset:0; z-index:190;
