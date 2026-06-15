@@ -14,6 +14,9 @@
 
 <nav>
   <div class="inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="logo">ANOTHER ONE <span>ULTRA</span></a>
     <div class="navlinks">
       <a href="index.html">Home</a>
@@ -26,9 +29,19 @@
   </div>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="lottery.html" class="active">Lottery</a>
+  <a href="partnership.html">Partnership</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+  <a href="lottery.html" class="nav-cta">Sign up</a>
+</div>
+
 <!-- ===== PAGE HERO ===== -->
 <header class="hero" id="top">
   <div class="hero-inner wrap">
+    <div class="eyebrow">First edition · Czech Republic</div>
     <h1 class="display page-title">Would you like to be part of<br><span class="accent">Another One Ultra?</span></h1>
   </div>
 </header>
@@ -131,7 +144,7 @@
   <div class="wrap">
     <h2 class="section-title display">Enter the lottery</h2>
 
-    <form class="form-grid">
+    <form class="form-grid" data-form-name="lottery">
       <div class="form-row">
         <div class="field">
           <label>First name <span class="req">(required)</span></label>
@@ -147,18 +160,16 @@
         <input type="email" name="email" required>
       </div>
       <div class="field">
-        <label>Country <span class="req">(required)</span></label>
-        <input type="text" name="country" required>
-      </div>
-      <div class="field">
         <label>Message <span class="req">(optional)</span></label>
         <textarea name="message"></textarea>
       </div>
       <button type="submit" class="btn-primary">Enter the lottery</button>
+      <div class="form-status"></div>
     </form>
   </div>
 </section>
 
+<script src="forms.js"></script>
 
 <footer>
   <div class="wrap">
@@ -174,6 +185,27 @@
     <div class="footer-email"><a href="mailto:info@anotheroneultra.com">info@anotheroneultra.com</a></div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function(){
+        var isOpen = menu.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          menu.classList.remove('open');
+          toggle.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>

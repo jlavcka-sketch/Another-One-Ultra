@@ -14,6 +14,9 @@
 
 <nav>
   <div class="inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="logo">ANOTHER ONE <span>ULTRA</span></a>
     <div class="navlinks">
       <a href="index.html" class="active">Home</a>
@@ -25,6 +28,15 @@
     <a href="lottery.html" class="nav-cta">Sign up</a>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="active">Home</a>
+  <a href="lottery.html">Lottery</a>
+  <a href="partnership.html">Partnership</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+  <a href="lottery.html" class="nav-cta">Sign up</a>
+</div>
 
 <!-- ===== HOME / HERO ===== -->
 <header class="hero hero-tall" id="home">
@@ -260,7 +272,6 @@
   });
 </script>
 
-
 <footer>
   <div class="wrap">
     <div class="footer-tag">ANOTHER ONE <span style="color:var(--ember);">ULTRA</span></div>
@@ -275,6 +286,27 @@
     <div class="footer-email"><a href="mailto:info@anotheroneultra.com">info@anotheroneultra.com</a></div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function(){
+        var isOpen = menu.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          menu.classList.remove('open');
+          toggle.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>

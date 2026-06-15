@@ -14,6 +14,9 @@
 
 <nav>
   <div class="inner">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <a href="index.html" class="logo">ANOTHER ONE <span>ULTRA</span></a>
     <div class="navlinks">
       <a href="index.html">Home</a>
@@ -25,6 +28,15 @@
     <a href="lottery.html" class="nav-cta">Sign up</a>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="lottery.html">Lottery</a>
+  <a href="partnership.html">Partnership</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a href="faq.html">FAQ</a>
+  <a href="lottery.html" class="nav-cta">Sign up</a>
+</div>
 
 <!-- ===== PAGE HERO ===== -->
 <header class="hero" id="top">
@@ -44,7 +56,7 @@
       <p>We'll get back to you as soon as possible.</p>
     </div>
 
-    <form class="form-grid">
+    <form class="form-grid" data-form-name="contact">
       <div class="form-row">
         <div class="field">
           <label>First name <span class="req">(required)</span></label>
@@ -75,6 +87,7 @@
         <textarea name="message" required></textarea>
       </div>
       <button type="submit" class="btn-primary">Submit your question</button>
+      <div class="form-status"></div>
     </form>
 
     <div class="contact-links">
@@ -84,6 +97,7 @@
   </div>
 </section>
 
+<script src="forms.js"></script>
 
 <footer>
   <div class="wrap">
@@ -99,6 +113,27 @@
     <div class="footer-email"><a href="mailto:info@anotheroneultra.com">info@anotheroneultra.com</a></div>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var menu = document.getElementById('mobileMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function(){
+        var isOpen = menu.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          menu.classList.remove('open');
+          toggle.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
