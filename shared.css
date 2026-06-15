@@ -145,7 +145,7 @@ nav .inner{
 .hero h1.page-title{font-size:clamp(36px, 7vw, 76px);}
 .hero h1 .accent{color:var(--ember);}
 .hero-sub{
-  margin:28px auto 0; font-size:16px; color:var(--paper-dim); max-width:420px;
+  margin:28px auto 0; font-size:17px; color:var(--paper); max-width:440px; line-height:1.6;
 }
 .hero-cta{margin-top:36px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
 .btn-secondary{
@@ -227,7 +227,7 @@ section:last-of-type{border-bottom:none;}
 }
 .lottery-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;}
 @media (max-width:860px){ .lottery-grid{grid-template-columns:1fr; gap:40px;} }
-.lottery-copy p{font-size:15px; color:var(--paper-dim); margin-bottom:16px;}
+.lottery-copy p{font-size:16px; color:var(--paper); margin-bottom:18px; line-height:1.7;}
 .lottery-copy .hl{color:var(--ember); font-weight:600;}
 .lottery-card{
   border:1px solid var(--moss-dim); background:var(--card); padding:32px;
@@ -250,13 +250,15 @@ section:last-of-type{border-bottom:none;}
   cursor:pointer; padding:0 0 24px; border:none; background:none; width:100%;
   text-align:left;
 }
+.steps-wrap + .steps-wrap{margin-top:8px;}
 .steps-toggle .section-title{margin-bottom:0; text-align:left; flex:1;}
 .steps-toggle .plus{
-  font-family:'JetBrains Mono', monospace; font-size:28px; color:var(--moss);
+  font-family:'JetBrains Mono', monospace; font-size:28px; color:var(--paper);
   flex-shrink:0; transition:transform .2s; margin-left:24px;
 }
 .steps-wrap.open .steps-toggle .plus{transform:rotate(45deg);}
 .steps-collapse{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+.steps-collapse .sponsor-copy{padding-top:8px; margin-bottom:0;}
 .steps{max-width:760px; margin:0 auto; counter-reset:step; padding-top:8px;}
 .step{
   display:grid; grid-template-columns:48px 1fr; gap:20px;
@@ -266,7 +268,7 @@ section:last-of-type{border-bottom:none;}
 .step .num{
   font-family:'Anton', sans-serif; font-size:24px; color:var(--ember);
 }
-.step .body p{font-size:14px; color:var(--paper-dim); margin-top:2px;}
+.step .body p{font-size:15px; line-height:1.6; color:var(--paper); margin-top:4px;}
 .step .body .hl{color:var(--paper); font-weight:600; font-size:15px;}
 .steps-note{
   max-width:760px; margin:24px auto 0; text-align:center;
@@ -276,7 +278,7 @@ section:last-of-type{border-bottom:none;}
 
 /* ===== PARTNERSHIP / CONTACT ===== */
 .sponsor-copy{max-width:900px; margin:0 auto 36px; text-align:center;}
-.sponsor-copy p{font-size:17px; color:var(--paper-dim); margin-bottom:12px; line-height:1.6;}
+.sponsor-copy p{font-size:18px; color:var(--paper); margin-bottom:16px; line-height:1.7;}
 .sponsor-copy .cta{font-family:'JetBrains Mono', monospace; color:var(--ember); font-weight:700; letter-spacing:0.06em; font-size:18px;}
 
 .form-grid{max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:24px;}
@@ -342,12 +344,12 @@ section:last-of-type{border-bottom:none;}
 .faq-a{
   max-height:0; overflow:hidden; transition:max-height .25s ease;
 }
-.faq-a-inner{padding:0 0 18px; font-size:14px; color:var(--paper-dim); max-width:760px;}
+.faq-a-inner{padding:0 0 18px; font-size:15px; line-height:1.7; color:var(--paper); max-width:760px;}
 
 /* ===== LEGAL PAGES ===== */
 .legal h2{font-size:clamp(24px,4vw,36px); margin-bottom:8px;}
 .legal h3{font-size:18px; margin:32px 0 8px; color:var(--paper);}
-.legal p, .legal li{font-size:15px; color:var(--paper-dim); margin-bottom:12px;}
+.legal p, .legal li{font-size:16px; line-height:1.7; color:var(--paper); margin-bottom:14px;}
 .legal ul{padding-left:20px; margin-bottom:12px;}
 .legal .updated{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--moss); margin-bottom:32px; letter-spacing:0.05em;}
 
