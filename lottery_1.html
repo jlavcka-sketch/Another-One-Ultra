@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lottery — ANOTHER ONE ULTRA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="index.html" class="logo">ANOTHER ONE <span>ULTRA</span></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="lottery.html" class="active">Lottery</a>
+      <a href="partnership.html">Partnership</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="lottery.html" class="nav-cta">Sign up</a>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-inner wrap">
+    <div class="eyebrow">First edition · Czech Republic</div>
+    <h1 class="display page-title">Would you like to be part of<br><span class="accent">Another One Ultra?</span></h1>
+  </div>
+</header>
+
+<!-- ===== LOTTERY ===== -->
+<section id="lottery-section">
+  <div class="marquee">
+    <svg class="marquee-grain" viewBox="0 0 200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <filter id="marqueegrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+      <rect width="100%" height="100%" filter="url(#marqueegrain)"/>
+    </svg>
+    <div class="marquee-track">
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+      <span>Registration open <span class="dot">&bull;</span></span>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:56px;">
+    <div class="lottery-grid">
+      <div class="lottery-copy">
+        <p>The lottery is open!</p>
+        <p>We will collect all registrations until <span class="hl">a date to be announced</span>, after which we will <span class="hl">handpick 150 runners</span> from all entries.</p>
+        <p>There are no refunds. Once your entry fee has been paid and you are confirmed for the race, the fee will be used to organize the event.</p>
+        <p>Starting spots are <span class="hl">non-transferable</span>.</p>
+        <p>Thank you for your understanding.</p>
+      </div>
+
+      <div class="lottery-card">
+        <div class="tag">Lottery · first edition</div>
+        <h3 class="display">Enter the draw</h3>
+        <div class="lottery-stats">
+          <div class="lottery-stat">
+            <div class="val mono">150</div>
+            <div class="lbl">spots</div>
+          </div>
+          <div class="lottery-stat">
+            <div class="val mono">6.7</div>
+            <div class="lbl">km / loop</div>
+          </div>
+        </div>
+        <a class="btn-primary" href="#form">Enter the lottery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO ENTER ===== -->
+<section id="how-to-enter">
+  <div class="wrap">
+    <h2 class="section-title display">How to enter</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num display">01</div>
+        <div class="body">
+          <div class="hl">Fill out the form below using your real name.</div>
+          <p>One entry per person only.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num display">02</div>
+        <div class="body">
+          <div class="hl">We will collect all registrations until a date to be announced.</div>
+          <p>Follow our Instagram for updates on the registration deadline.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num display">03</div>
+        <div class="body">
+          <div class="hl">After the lottery closes, 150 participants will be selected.</div>
+          <p>All selected athletes will receive a personal registration code by email.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num display">04</div>
+        <div class="body">
+          <div class="hl">Using your code, you will have 48 hours to complete the entry</div>
+          <p>by paying the registration fee. If the payment is not completed within 48 hours, the code expires and the spot will be reassigned.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num display">05</div>
+        <div class="body">
+          <div class="hl">Once your payment is confirmed, you will receive a final confirmation email.</div>
+          <p>If you receive this email, your spot is secured.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ENTRY FORM ===== -->
+<section id="form" style="border-bottom:none;">
+  <div class="wrap">
+    <h2 class="section-title display">Enter the lottery</h2>
+
+    <form class="form-grid">
+      <div class="form-row">
+        <div class="field">
+          <label>First name <span class="req">(required)</span></label>
+          <input type="text" name="first_name" required>
+        </div>
+        <div class="field">
+          <label>Last name <span class="req">(required)</span></label>
+          <input type="text" name="last_name" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>Email <span class="req">(required)</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="field">
+        <label>Country <span class="req">(required)</span></label>
+        <input type="text" name="country" required>
+      </div>
+      <div class="field">
+        <label>Message <span class="req">(optional)</span></label>
+        <textarea name="message"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Enter the lottery</button>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-tag">ANOTHER ONE <span style="color:var(--ember);">ULTRA</span></div>
+    <div class="footer-cta">
+      <a href="lottery.html" class="btn-primary">Enter the lottery</a>
+    </div>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy / GDPR</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-email"><a href="mailto:info@anotheroneultra.com">info@anotheroneultra.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
