@@ -97,47 +97,65 @@
 <!-- ===== HOW TO ENTER ===== -->
 <section id="how-to-enter">
   <div class="wrap">
-    <h2 class="section-title display">How to enter</h2>
-
-    <div class="steps">
-      <div class="step">
-        <div class="num display">01</div>
-        <div class="body">
-          <div class="hl">Fill out the form below using your real name.</div>
-          <p>One entry per person only.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num display">02</div>
-        <div class="body">
-          <div class="hl">We will collect all registrations until a date to be announced.</div>
-          <p>Follow our Instagram for updates on the registration deadline.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num display">03</div>
-        <div class="body">
-          <div class="hl">After the lottery closes, 150 participants will be selected.</div>
-          <p>All selected athletes will receive a personal registration code by email.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num display">04</div>
-        <div class="body">
-          <div class="hl">Using your code, you will have 48 hours to complete the entry</div>
-          <p>by paying the registration fee. If the payment is not completed within 48 hours, the code expires and the spot will be reassigned.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="num display">05</div>
-        <div class="body">
-          <div class="hl">Once your payment is confirmed, you will receive a final confirmation email.</div>
-          <p>If you receive this email, your spot is secured.</p>
+    <div class="steps-wrap" id="howToEnterLottery">
+      <button class="steps-toggle" type="button">
+        <h2 class="section-title display">How to enter</h2>
+        <span class="plus">+</span>
+      </button>
+      <div class="steps-collapse">
+        <div class="steps">
+          <div class="step">
+            <div class="num display">01</div>
+            <div class="body">
+              <div class="hl">Fill out the form below using your real name.</div>
+              <p>One entry per person only.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num display">02</div>
+            <div class="body">
+              <div class="hl">We will collect all registrations until a date to be announced.</div>
+              <p>Follow our Instagram for updates on the registration deadline.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num display">03</div>
+            <div class="body">
+              <div class="hl">After the lottery closes, 150 participants will be selected.</div>
+              <p>All selected athletes will receive a personal registration code by email.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num display">04</div>
+            <div class="body">
+              <div class="hl">Using your code, you will have 48 hours to complete the entry</div>
+              <p>by paying the registration fee. If the payment is not completed within 48 hours, the code expires and the spot will be reassigned.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num display">05</div>
+            <div class="body">
+              <div class="hl">Once your payment is confirmed, you will receive a final confirmation email.</div>
+              <p>If you receive this email, your spot is secured.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll('.steps-wrap').forEach(function(wrap){
+    var toggle = wrap.querySelector('.steps-toggle');
+    var collapse = wrap.querySelector('.steps-collapse');
+    toggle.addEventListener('click', function(){
+      var isOpen = wrap.classList.toggle('open');
+      collapse.style.maxHeight = isOpen ? collapse.scrollHeight + 'px' : null;
+    });
+  });
+</script>
+
 
 <!-- ===== ENTRY FORM ===== -->
 <section id="form" style="border-bottom:none;">
