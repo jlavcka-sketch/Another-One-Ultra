@@ -160,16 +160,16 @@ nav .inner{
 /* ===== SECTION GENERAL ===== */
 section{padding:40px 0; border-bottom:none;}
 .section-title{
-  font-size:clamp(28px, 4vw, 44px); text-align:left; margin-bottom:24px;
+  font-size:clamp(28px, 4vw, 44px); text-align:center; margin-bottom:24px;
 }
 .section-lead{
-  max-width:720px; margin:-8px 0 24px; text-align:left;
+  max-width:720px; margin:-8px auto 24px; text-align:center;
   font-size:16px; color:var(--paper-dim); line-height:1.5;
 }
 
 /* ===== FORMAT (centered two-column block) ===== */
 #format{padding:48px 0;}
-#format .section-title{margin-bottom:32px;}
+#format .section-title{margin-bottom:32px; text-align:left; max-width:920px; margin-left:auto; margin-right:auto;}
 .format-center{max-width:920px; margin:0 auto;}
 .format-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
 @media (max-width:860px){ .format-grid{grid-template-columns:1fr; gap:32px;} }
@@ -208,17 +208,18 @@ section{padding:40px 0; border-bottom:none;}
 #lottery-section .section-title{margin-bottom:0;}
 .marquee{
   overflow:hidden; white-space:nowrap; position:relative;
-  padding:22px 0; margin:48px 0; background:var(--ember);
+  padding:12px 0; margin:40px 0; background:var(--card);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
 }
 .marquee-grain{
-  position:absolute; inset:0; width:100%; height:100%; opacity:0.22; mix-blend-mode:multiply; pointer-events:none;
+  position:absolute; inset:0; width:100%; height:100%; opacity:0.06; mix-blend-mode:overlay; pointer-events:none;
 }
 .marquee-track{display:inline-flex; gap:40px; animation:marquee 22s linear infinite; position:relative; z-index:1;}
 .marquee span{
-  font-family:'Anton', sans-serif; text-transform:uppercase; font-size:clamp(20px,3.4vw,34px);
-  letter-spacing:0.02em; color:var(--ink); display:inline-flex; align-items:center; gap:40px;
+  font-family:'JetBrains Mono', monospace; text-transform:uppercase; font-weight:700; font-size:13px;
+  letter-spacing:0.18em; color:var(--ember); display:inline-flex; align-items:center; gap:40px;
 }
-.marquee span .dot{color:var(--paper); font-family:'JetBrains Mono', monospace; font-size:0.6em;}
+.marquee span .dot{color:var(--paper-dim); font-family:'JetBrains Mono', monospace; font-size:0.8em;}
 @keyframes marquee{
   from{transform:translateX(0);}
   to{transform:translateX(-50%);}
