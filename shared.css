@@ -39,19 +39,21 @@ nav.scrolled{
   background:var(--ink); border-bottom:1px solid var(--line);
 }
 nav .inner{
-  display:flex; align-items:center; justify-content:space-between; gap:24px;
+  position:relative;
+  display:flex; align-items:center;
   padding:20px 24px; max-width:1080px; margin:0 auto;
+  min-height:56px;
 }
 .logo{
   display:flex; align-items:center;
-  flex:1;
 }
 .logo img{
   height:56px; width:auto; display:block; vertical-align:middle;
 }
 .navlinks{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
   display:flex; gap:28px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
-  align-items:center; white-space:nowrap; flex:1; justify-content:center;
+  align-items:center; white-space:nowrap;
 }
 .navlinks a{text-decoration:none; color:var(--paper-dim); transition:color .2s; line-height:1;}
 .navlinks a:hover{color:var(--moss);}
@@ -99,7 +101,7 @@ nav .inner{
 @media (max-width: 860px){
   .navlinks{display:none;}
   .menu-toggle{display:block;}
-  .logo{flex:1; justify-content:center;}
+  .logo{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);}
   .logo img{height:38px;}
   .mobile-menu{display:flex;}
 }
