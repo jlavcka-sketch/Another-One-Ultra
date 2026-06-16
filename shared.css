@@ -39,19 +39,19 @@ nav.scrolled{
   background:var(--ink); border-bottom:1px solid var(--line);
 }
 nav .inner{
-  display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:24px;
+  display:flex; align-items:center; justify-content:space-between; gap:24px;
   padding:20px 24px; max-width:1080px; margin:0 auto;
 }
 .logo{
   display:flex; align-items:center;
-  justify-self:start; grid-column:1;
+  flex:1;
 }
 .logo img{
-  height:56px; width:auto; display:block;
+  height:56px; width:auto; display:block; vertical-align:middle;
 }
 .navlinks{
   display:flex; gap:28px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
-  justify-self:center; grid-column:2; align-items:center; white-space:nowrap;
+  align-items:center; white-space:nowrap; flex:1; justify-content:center;
 }
 .navlinks a{text-decoration:none; color:var(--paper-dim); transition:color .2s; line-height:1;}
 .navlinks a:hover{color:var(--moss);}
@@ -60,11 +60,10 @@ nav .inner{
 /* ===== MOBILE MENU TOGGLE ===== */
 .menu-toggle{
   display:none;
-  justify-self:start;
   width:36px; height:36px;
   background:none; border:none; cursor:pointer;
   position:relative; z-index:200;
-  padding:0;
+  padding:0; flex-shrink:0;
 }
 .menu-toggle span{
   position:absolute; top:50%; left:50%;
@@ -99,8 +98,8 @@ nav .inner{
 
 @media (max-width: 860px){
   .navlinks{display:none;}
-  .menu-toggle{display:block; grid-column:1; justify-self:start;}
-  .logo{grid-column:2;}
+  .menu-toggle{display:block;}
+  .logo{flex:1; justify-content:center;}
   .logo img{height:38px;}
   .mobile-menu{display:flex;}
 }
